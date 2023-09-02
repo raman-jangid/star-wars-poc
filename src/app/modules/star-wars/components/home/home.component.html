@@ -1,0 +1,20 @@
+<header>
+    <h2>Welcome to Star Wars Dashboard</h2>
+    <h5>Click on the cards to see the details</h5>
+</header>
+<content>
+    <div class="card-container">
+        <div class="card" [routerLink]="['/star-wars/planets']">
+            <h3>Planets</h3>
+        </div>
+        <div class="card" [routerLink]="['/star-wars/characters']">
+            <h3>Characters</h3>
+        </div>
+        <div class="card" [routerLink]="['/star-wars/films']">
+            <h3>Films</h3>            
+        </div>
+        <div class="card" [routerLink]="['/star-wars/species']">
+            <h3>Species</h3>
+        </div>
+    </div>
+</content>

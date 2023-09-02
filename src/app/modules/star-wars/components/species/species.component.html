@@ -1,0 +1,23 @@
+<header>
+    <h3>Star Wars Species</h3>
+</header>
+<content>
+    <div class="card-container">
+        <div class="card" *ngFor="let specie of species">
+            <div class="image">
+                <img #img [src]="specie?.image_url"
+                    (error)="img.src='https://placehold.co/300x200?text=Image+not+Found'">
+            </div>
+            <div class="details">
+                <div>Name: <span>{{specie?.name}}</span></div>
+                <div>Classification: <span>{{specie?.classification}}</span></div>
+                <div>Designation: <span>{{specie.designation}}</span></div>
+                <div>Avg. height(cm): <span>{{specie?.average_height || 'NA'}}</span></div>
+                <div>Skin colors: <span>{{specie?.skin_colors}}</span></div>
+                <div>Eye colors: <span>{{specie.eye_colors}}</span></div>
+                <div>Hair colors: <span>{{specie.hair_colors}}</span></div>
+                <div>Avg lifespan(yrs): <span>{{specie.average_lifespan}}</span></div>
+            </div>
+        </div>
+    </div>
+</content>

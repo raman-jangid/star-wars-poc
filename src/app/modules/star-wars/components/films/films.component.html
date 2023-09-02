@@ -1,0 +1,25 @@
+<header>
+    <h3>Star Wars Films</h3>
+</header>
+<content>
+    <div class="card-container">
+        <div class="card" *ngFor="let film of films">
+            <div class="image">
+                <img #img [src]="film?.image_url" fill
+                    (error)="img.src='https://placehold.co/300x200?text=Image+not+Found'">
+            </div>
+            <div class="details">
+                <div>Title: <span>{{film?.title}}</span></div>
+                <div>Opening: <span>{{film?.opening_crawl}}</span></div>
+                <div>Episode Id: <span>{{film?.episode_id}}</span></div>
+                <div>Director: <span>{{film?.director}}</span></div>
+                <div>Producer: <span>{{film?.producer}}</span></div>
+                <div>Release Date: <span>{{film?.release_date | date:'dd MMM YYYY'}}</span></div>
+                <div>Characters: <span>{{film?.characters?.length}}</span></div>
+                <div>Planets: <span>{{film?.planets?.length}}</span></div>
+                <!-- <div>Vehicles: <span>{{film?.vehicles?.length}}</span></div>
+                <div>Species: <span>{{film?.species?.length}}</span></div> -->
+            </div>
+        </div>
+    </div>
+</content>

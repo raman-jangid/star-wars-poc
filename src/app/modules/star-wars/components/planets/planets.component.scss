@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    .image{
+        width: 30%;
+        img{
+            max-width: 100%;
+        }
+    }
+    .details{
+        width: 70%;
+        padding: 10px;
+    }
+}
